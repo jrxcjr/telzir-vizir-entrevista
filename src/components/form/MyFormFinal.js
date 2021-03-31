@@ -7,10 +7,13 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
+import SelectTypeComponent from "./SelectTypeComponent";
+import SelectTypeComponentPlans from "./SelectTypeComponentPlans";
 
 class MyFormFinal extends React.Component {
  constructor(props) {
   super(props);
+  this.ref= React.createRef();
   this.computedData = {};
   this.totalCost = 0;
   this.totalCostWithPlan = 0;
@@ -19,6 +22,8 @@ class MyFormFinal extends React.Component {
   this.calculationComponent = this.calculationComponent.bind(this);
   this.planModifierComponent = this.planModifierComponent.bind(this);
  }
+
+
 
  handleSubmit(event) {
   event.preventDefault();
@@ -87,50 +92,26 @@ class MyFormFinal extends React.Component {
      <Container>
       <Row>
        <Col>
-        <TextTypeComponent
-         name="callOrigin"
+        <SelectTypeComponent name="callOrigin"
          id="callOrigin"
          type="text"
-         output="Destination"
-         placeholder="011, 016, 017 or 018"
-        ></TextTypeComponent>
-        <TextTypeComponent
-         name="callDestination"
+         output="Origin"
+         ></SelectTypeComponent>
+         <SelectTypeComponent name="callDestination"
          id="callDestination"
          type="text"
          output="Destination"
-         placeholder="011, 016, 017 or 018"
-        ></TextTypeComponent>
+         ></SelectTypeComponent>
         <NumberTypeComponent
          name="minutes"
          type="text"
          id="minutes"
          placeholder="10"
-        ></NumberTypeComponent>
-       </Col>
-       <Col>
-        <Form.Label>Do You Have a Plan?</Form.Label>
-        <CheckBoxTypeComponent
-         type="checkbox"
-         id="FaleMaisPlan"
+        ></NumberTypeComponent> 
+        <SelectTypeComponentPlans id="FaleMaisPlan"
          name="faleMaisPlan"
-         value="falemais30"
-         label="Fale Mais 30"
-        ></CheckBoxTypeComponent>
-        <CheckBoxTypeComponent
-         type="checkbox"
-         id="FaleMaisPlan"
-         name="faleMaisPlan"
-         value="falemais60"
-         label="Fale Mais 60"
-        ></CheckBoxTypeComponent>
-        <CheckBoxTypeComponent
-         type="checkbox"
-         id="FaleMaisPlan"
-         name="faleMaisPlan"
-         value="falemais120"
-         label="Fale Mais 120"
-        ></CheckBoxTypeComponent>
+         label="Fale Mais"></SelectTypeComponentPlans>
+        <br></br>
         <button className="bttn-blue">Send the Data!</button>
        </Col>
       </Row>

@@ -21,22 +21,22 @@ function Footer(props) {
       <Nav bg="dark" variant="dark" defaultActiveKey="/home">
        <Nav.Link href="#" title="About Us">
         <IoEllipsisHorizontalCircleOutline
-         color="#1d29b3"
+         color="rgba(255,255,255,.5)"
          size={22}
         ></IoEllipsisHorizontalCircleOutline>
        </Nav.Link>
        <Nav.Link href="#" title="Our Blog">
-        <IoLogoMedium color="#1d29b3" size={22}></IoLogoMedium>
+        <IoLogoMedium color="rgba(255,255,255,.5)" size={22}></IoLogoMedium>
        </Nav.Link>
        <Nav.Link href="#" title="Press Releases">
-        <IoNewspaper color="#1d29b3" size={22}></IoNewspaper>
+        <IoNewspaper color="rgba(255,255,255,.5)" size={22}></IoNewspaper>
        </Nav.Link>
        <Nav.Link href="#" title="Apple AppStore">
-        <IoLogoAppleAppstore color="#1d29b3" size={22}></IoLogoAppleAppstore>
+        <IoLogoAppleAppstore color="rgba(255,255,255,.5)" size={22}></IoLogoAppleAppstore>
        </Nav.Link>
        <Nav.Link href="#" title="Google Playstore">
         <IoLogoGooglePlaystore
-         color="#1d29b3"
+         color="rgba(255,255,255,.5)"
          size={22}
         ></IoLogoGooglePlaystore>
        </Nav.Link>
@@ -46,16 +46,16 @@ function Footer(props) {
      <Col>
       <Nav bg="dark" variant="dark" className="justify-content-end">
        <Nav.Link href="#" title="Instagram">
-        <IoLogoInstagram color="#1d29b3" size={22}></IoLogoInstagram>
+        <IoLogoInstagram color="rgba(255,255,255,.5)" size={22}></IoLogoInstagram>
        </Nav.Link>
        <Nav.Link href="#" title="Facebook">
-        <IoLogoFacebook color="#1d29b3" size={22}></IoLogoFacebook>
+        <IoLogoFacebook color="rgba(255,255,255,.5)" size={22}></IoLogoFacebook>
        </Nav.Link>
        <Nav.Link href="#" title="Twitter">
-        <IoLogoTwitter color="#1d29b3" size={22}></IoLogoTwitter>
+        <IoLogoTwitter color="rgba(255,255,255,.5)" size={22}></IoLogoTwitter>
        </Nav.Link>
        <Nav.Link href="#" title="Google +">
-        <IoLogoGoogle color="#1d29b3" size={22}></IoLogoGoogle>
+        <IoLogoGoogle color="rgba(255,255,255,.5)" size={22}></IoLogoGoogle>
        </Nav.Link>
       </Nav>
      </Col>
