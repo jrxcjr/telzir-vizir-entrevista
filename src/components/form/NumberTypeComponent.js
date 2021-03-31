@@ -3,8 +3,9 @@ import { Form } from "react-bootstrap";
 
 function NumberTypeComponent(props) {
  return (
-  <div>
-   <Form.Label>Call Minutes : </Form.Label>
+  <div className='minutes-container'>
+   Call Minutes:
+   <br></br>
    <Form.Control
     name={props.name}
     type={props.type}

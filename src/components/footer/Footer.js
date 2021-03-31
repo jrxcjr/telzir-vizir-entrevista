@@ -18,7 +18,7 @@ function Footer(props) {
    <Container fluid>
     <Row>
      <Col>
-      <Nav bg="dark" variant="dark" defaultActiveKey="/home">
+      <Nav  className='footer-nav' bg="dark" variant="dark" defaultActiveKey="/home">
        <Nav.Link href="#" title="About Us">
         <IoEllipsisHorizontalCircleOutline
          color="rgba(255,255,255,.5)"
@@ -43,7 +43,7 @@ function Footer(props) {
       </Nav>
      </Col>
      <Col></Col>
-     <Col>
+     <Col className='footer-nav'>
       <Nav bg="dark" variant="dark" className="justify-content-end">
        <Nav.Link href="#" title="Instagram">
         <IoLogoInstagram color="rgba(255,255,255,.5)" size={22}></IoLogoInstagram>

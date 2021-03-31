@@ -16,6 +16,7 @@ class SelectTypeComponentPlans extends Component {
     return (
       <div>
           Do you Have a Plan?
+          <br></br>
         <Form.Control
         name={this.props.name}
         id={this.props.id}

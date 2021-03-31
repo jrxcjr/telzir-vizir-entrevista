@@ -7,7 +7,9 @@ import { Container } from "react-bootstrap";
 class CardComposer extends React.Component {
  render() {
   return (
-   <div className="cardComponentContainer">
+    <div>
+        <h2>Call Plan Selection</h2>
+   <div className="cardComponentContainer"> 
     <Container>
      <Row>
       <Col>
@@ -21,6 +23,7 @@ class CardComposer extends React.Component {
       </Col>
      </Row>
     </Container>
+   </div>
    </div>
   );
  }

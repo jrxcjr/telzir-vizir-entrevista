@@ -9,8 +9,15 @@ function BootstrapNavbar(props) {
  return (
   <React.Fragment>
    <div>
-    <Navbar className="bg-#201db3" bg="dark" variant="dark">
-     <Navbar.Brand href="#home">TELZIR</Navbar.Brand>
+    <Navbar sticky="top" className="bg-#201db3" bg="dark" variant="dark">
+     <Navbar.Brand href="#home"><img
+        alt=""
+        src="https://vizir.com.br/wp-content/uploads/2020/04/logo.svg"
+        width="30"
+        height="30"
+        className="d-inline-block align-top"
+      />{' '}
+      Vizir Telzir</Navbar.Brand>
      <Nav className="mr-auto">
       <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#plans">Plans</Nav.Link>

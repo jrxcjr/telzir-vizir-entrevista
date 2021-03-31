@@ -1,9 +1,6 @@
 import React from "react";
-import TextTypeComponent from "../form/TextTypeComponent";
 import NumberTypeComponent from "../form/NumberTypeComponent";
 import TableDisplayResults from "../form/TableDisplayResults";
-import CheckBoxTypeComponent from "../form/CheckboxTypeComponent";
-import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
@@ -90,38 +87,40 @@ class MyFormFinal extends React.Component {
    <div className="formContainer">
     <form onSubmit={this.handleSubmit}>
      <Container>
+       <h2>Call Calculator</h2>
       <Row>
        <Col>
         <SelectTypeComponent name="callOrigin"
          id="callOrigin"
          type="text"
          output="Origin"
+         className="select-element"
          ></SelectTypeComponent>
          <SelectTypeComponent name="callDestination"
          id="callDestination"
          type="text"
          output="Destination"
+         className="select-element"
          ></SelectTypeComponent>
         <NumberTypeComponent
          name="minutes"
          type="text"
          id="minutes"
-         placeholder="10"
+         className="select-element"
         ></NumberTypeComponent> 
-        <SelectTypeComponentPlans id="FaleMaisPlan"
+        <SelectTypeComponentPlans 
          name="faleMaisPlan"
-         label="Fale Mais"></SelectTypeComponentPlans>
+         id="FaleMaisPlan"
+         className="select-element"></SelectTypeComponentPlans>
         <br></br>
         <button className="bttn-blue">Send the Data!</button>
        </Col>
       </Row>
-     </Container>
+    </Container>
     </form>
-
     {!!this.totalCostWithPlan ? (
      <div className="resultsContainer">
-      <Container>
-       <Col>
+       <Container>
         <TableDisplayResults
          FirstGroup={this.computedData.callOrigin}
          SecondGroup={this.computedData.callDestination}
@@ -131,8 +130,7 @@ class MyFormFinal extends React.Component {
          SixthGroup={this.totalCostWithPlan}
          SeventhGroup={this.computedData.faleMaisPlan}
         ></TableDisplayResults>
-       </Col>
-      </Container>
+        </Container>
      </div>
     ) : null}
    </div>

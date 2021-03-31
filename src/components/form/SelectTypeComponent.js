@@ -16,6 +16,7 @@ class SelectTypeComponent extends Component {
     return (
       <div>
         Select your Call {this.props.output}
+        <br></br>
         <Form.Control
         name={this.props.name}
         type={this.props.type}
