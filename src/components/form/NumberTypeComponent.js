@@ -10,6 +10,7 @@ function NumberTypeComponent(props) {
     type={props.type}
     id={props.id}
     placeholder={props.placeholder}
+    pattern={props.pattern}
    ></Form.Control>
   </div>
  );
