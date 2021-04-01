@@ -77,9 +77,6 @@ class MyFormFinal extends React.Component {
   this.totalCostWithPlan = Number(this.totalCost) - plan.value;
  }
 
- //@TODO: IMPORT THE COMPONENTS TO MERGE IT WITH THE EXISTING THINGS
- //OK ON THE EXPORT FRONTS
-
  render() {
   return (
    <div id="formContainer" className="formContainer">
@@ -140,3 +137,7 @@ class MyFormFinal extends React.Component {
 }
 
 export default MyFormFinal;
+
+//The biggest problem in the developing of this application was trying to separate the concerns
+//of the form component, splitting the business logic and the rendering components into two
+//separate components. Thus, failing solid principles and the best practices in React Development.
