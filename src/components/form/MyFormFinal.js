@@ -10,7 +10,7 @@ import SelectTypeComponentPlans from "./SelectTypeComponentPlans";
 class MyFormFinal extends React.Component {
  constructor(props) {
   super(props);
-  this.ref= React.createRef();
+  this.ref = React.createRef();
   this.computedData = {};
   this.totalCost = 0;
   this.totalCostWithPlan = 0;
@@ -19,8 +19,6 @@ class MyFormFinal extends React.Component {
   this.calculationComponent = this.calculationComponent.bind(this);
   this.planModifierComponent = this.planModifierComponent.bind(this);
  }
-
-
 
  handleSubmit(event) {
   event.preventDefault();
@@ -84,53 +82,56 @@ class MyFormFinal extends React.Component {
 
  render() {
   return (
-   <div className="formContainer">
+   <div id="formContainer" className="formContainer">
     <form onSubmit={this.handleSubmit}>
      <Container>
-       <h2>Call Calculator</h2>
+      <h2>Call Calculator</h2>
       <Row>
        <Col>
-        <SelectTypeComponent name="callOrigin"
+        <SelectTypeComponent
+         name="callOrigin"
          id="callOrigin"
          type="text"
          output="Origin"
          className="select-element"
-         ></SelectTypeComponent>
-         <SelectTypeComponent name="callDestination"
+        ></SelectTypeComponent>
+        <SelectTypeComponent
+         name="callDestination"
          id="callDestination"
          type="text"
          output="Destination"
          className="select-element"
-         ></SelectTypeComponent>
+        ></SelectTypeComponent>
         <NumberTypeComponent
          name="minutes"
          type="text"
          id="minutes"
          className="select-element"
-        ></NumberTypeComponent> 
-        <SelectTypeComponentPlans 
+        ></NumberTypeComponent>
+        <SelectTypeComponentPlans
          name="faleMaisPlan"
          id="FaleMaisPlan"
-         className="select-element"></SelectTypeComponentPlans>
+         className="select-element"
+        ></SelectTypeComponentPlans>
         <br></br>
         <button className="bttn-blue">Send the Data!</button>
        </Col>
       </Row>
-    </Container>
+     </Container>
     </form>
     {!!this.totalCostWithPlan ? (
      <div className="resultsContainer">
-       <Container>
-        <TableDisplayResults
-         FirstGroup={this.computedData.callOrigin}
-         SecondGroup={this.computedData.callDestination}
-         ThirdGroup={this.computedData.minutes}
-         FourthGroup={this.computedData.faleMaisPlan}
-         FifthGroup={this.totalCost}
-         SixthGroup={this.totalCostWithPlan}
-         SeventhGroup={this.computedData.faleMaisPlan}
-        ></TableDisplayResults>
-        </Container>
+      <Container>
+       <TableDisplayResults
+        FirstGroup={this.computedData.callOrigin}
+        SecondGroup={this.computedData.callDestination}
+        ThirdGroup={this.computedData.minutes}
+        FourthGroup={this.computedData.faleMaisPlan}
+        FifthGroup={this.totalCost}
+        SixthGroup={this.totalCostWithPlan}
+        SeventhGroup={this.computedData.faleMaisPlan}
+       ></TableDisplayResults>
+      </Container>
      </div>
     ) : null}
    </div>
