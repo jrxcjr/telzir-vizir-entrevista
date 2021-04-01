@@ -23,6 +23,7 @@ class MyFormFinal extends React.Component {
  handleSubmit(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
+  console.log(formData)
   for (let key of formData.keys()) {
    this.computedData[key] = formData.get(key);
   }
