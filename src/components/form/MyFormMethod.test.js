@@ -46,5 +46,6 @@ describe('submit button', () => {
     });
   });
 
-//wasn't able to finish the implementation of the test function handleSubmit on time, wasn't able
+//wasn't able to finish the implementation of the test function handleSubmit on time,
+//crashing because of the event.preventdefault() function, wasn't able
 //to properly pass the mock values to make the function execute as it does when the user is calling it.
